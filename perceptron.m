@@ -1,7 +1,3 @@
-% Autor: Raul Melo
-% Curso: Ciência da Computação
-% Disciplina: Redes Neurais Artificiais
-% Prof.: Ajalmar Rego da Rocha Neto
 
 clc; clear;
 
