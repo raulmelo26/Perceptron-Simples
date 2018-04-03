@@ -1,16 +1,9 @@
-% Autor: Raul Melo
-% Curso: CiÍncia da ComputaÁ„o
-% Disciplina: Redes Neurais Artificiais
-% Prof.: Ajalmar Rego da Rocha Neto
-
 clc; clear;
 
 fprintf('+------------------------------------------------------------------------+\n');
-fprintf('|                           REDES NEURAIS ARTIFICIAIS                    |\n');
 fprintf('|                              PERCEPTRON SIMPLES                        |\n');
-fprintf('|                         (Prof. Ajalmar Rego da Rocha Neto)             |\n');
-fprintf('|                     AcadÍmico: Raul Gabriel Carvalho de Melo           |\n');
-fprintf('|                                IFCE - Maracana˙                        |\n');
+fprintf('|                     Acad√™mico: Raul Gabriel Carvalho de Melo           |\n');
+fprintf('|                                IFCE - Maracana√∫                        |\n');
 fprintf('+------------------------------------------------------------------------+\n');
 
 % Carrega os dados
@@ -22,12 +15,12 @@ data = [normaliza(data(:,1:end-1)) data(:,end)];
 graficoData = figure(1); hold on;
 scatter(data(1:200,1),data(1:200,2),'b',"filled");
 scatter(data(201:400,1),data(201:400,2),'r',"filled");
-title ("ClassificaÁ„o",'fontsize',18);
+title ("Classifica√ß√£o",'fontsize',18);
 legend_h = legend('Classe 1','Classe 2','location','northwest','orientation','horizontal');
 
 m = size(data,1);
 
-% RealizaÁıes
+% Realiza√ß√µes
 n = 20;
 
 soma_mat_conf = [0 0;0 0];
@@ -49,13 +42,13 @@ x1 = linspace(0,1,10);
 x2 = -(w(2)/w(3))*x1+(w(1)/w(3));
 plot(x1,x2);
 
-% Acur·cia, desvio padr„o e matriz de confus„o
+% Acur√°cia, desvio padr√£o e matriz de confus√£o
 _acuracia = mean(vetor_medias);
 d_padrao = std(vetor_medias);
 mat_conf_final = soma_mat_conf/n;
 
 fprintf('               +---------------------------------------+\n');
-fprintf('               |       MATRIZ DE CONFUS√O M…DIA        |\n');
+fprintf('               |       MATRIZ DE CONFUS√ÉO M√âDIA        |\n');
 fprintf('               |---------------------------------------|\n');
 fprintf('               |     d|y     |     ZERO    |     UM    |\n');
 fprintf('               |-------------|-------------|-----------|\n');
@@ -65,13 +58,13 @@ fprintf('               |      UM     |      %.2f   |   %.2f   |\n',mat_conf_fin
 fprintf('               +---------------------------------------+\n');
 
 fprintf('               +---------------------------------------+\n');
-fprintf('               |               ACUR¡CIA                |\n');
+fprintf('               |               ACUR√ÅCIA                |\n');
 fprintf('               |---------------------------------------|\n');
 fprintf('               |                %.2f%%                 |\n',_acuracia*100);
 fprintf('               +---------------------------------------+\n');
 
 fprintf('               +=======================================+\n');
-fprintf('               |             DESVIO PADR√O             |\n');
+fprintf('               |             DESVIO PADR√ÉO             |\n');
 fprintf('               |---------------------------------------|\n');
 fprintf('               |                %.6f               |\n',d_padrao);
 fprintf('               +=======================================|\n');
